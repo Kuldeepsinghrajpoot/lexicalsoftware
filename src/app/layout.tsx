@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import PageTransition from "@/components/shared/PageTransition";
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -76,6 +77,7 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
