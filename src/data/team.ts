@@ -83,13 +83,13 @@ export const team: TeamMember[] = [
     },
   },
   {
-    slug: "nikhil-singh",
-    name: "Nikhil Singh",
+    slug: "nikhil-rajpoot",
+    name: "Nikhil Rajpoot",
     role: "UI/UX Designer",
     experience: "2+ years",
     email: "nikhil@lexicalsoftware.dev",
-    cloudinaryId: "", // e.g. "team/nikhil-singh"
-    resumeUrl: "/resumes/nikhil-singh.pdf",
+    cloudinaryId: "", // e.g. "team/nikhil-rajpoot"
+    resumeUrl: "/resumes/nikhil-rajpoot.pdf",
     bio: "Designs clean, user-friendly interfaces and translates ideas into polished, ready-to-build UI.",
     skills: [
       { name: "Figma", level: 90 },

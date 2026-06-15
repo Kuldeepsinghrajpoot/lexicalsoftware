@@ -107,7 +107,7 @@ export async function submitContactForm(
     const { error } = await resend.emails.send({
       from: fromAddress,
       to: toAddress,
-      replyTo: email,
+      reply_to: email,
       subject: `New project inquiry from ${name}${
         projectType ? ` \u2014 ${projectType}` : ""
       }`,

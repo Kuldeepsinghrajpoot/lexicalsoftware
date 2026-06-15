@@ -88,7 +88,7 @@ export async function submitApplication(
     const { error } = await resend.emails.send({
       from: fromAddress,
       to: toAddress,
-      replyTo: email,
+      reply_to: email,
       subject: `New job application: ${role || "General application"} \u2014 ${name}`,
       text: [
         `Name: ${name}`,
