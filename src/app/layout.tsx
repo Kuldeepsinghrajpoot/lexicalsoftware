@@ -7,7 +7,8 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import PageTransition from "@/components/shared/PageTransition";
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
-
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
@@ -68,6 +69,8 @@ export default function RootLayout({
       >
        
         <ThemeProvider>
+          <Analytics/>
+          <SpeedInsights/>
           <Navbar />
           <NextTopLoader />
           <main className="pt-20">

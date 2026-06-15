@@ -9,10 +9,6 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
-}
-
 export default async function Image({
   params,
 }: {
