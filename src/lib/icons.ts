@@ -1,0 +1,42 @@
+import {
+  Globe,
+  Layers,
+  Code2,
+  Smartphone,
+  Coffee,
+  Database,
+  Cloud,
+  Wrench,
+  Hexagon,
+  Home,
+  Info,
+  Briefcase,
+  Users,
+  Star,
+  Newspaper,
+  GraduationCap,
+  type LucideIcon,
+} from "lucide-react";
+
+export const serviceIconMap: Record<string, LucideIcon> = {
+  globe: Globe,
+  layers: Layers,
+  code: Code2,
+  smartphone: Smartphone,
+  next: Hexagon,
+  coffee: Coffee,
+  database: Database,
+  cloud: Cloud,
+  wrench: Wrench,
+};
+
+export const navIconMap: Record<string, LucideIcon> = {
+  home: Home,
+  info: Info,
+  wrench: Wrench,
+  briefcase: Briefcase,
+  users: Users,
+  star: Star,
+  newspaper: Newspaper,
+  graduationCap: GraduationCap,
+};
