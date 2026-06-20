@@ -5,7 +5,8 @@ export default function CallToAction() {
     <section className="border-t border-line">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl border border-panel-border bg-panel px-8 py-16 text-center sm:px-16">
-          <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-node-glow" />
+          <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 animate-spin-slow rounded-full bg-node-glow" />
+          <div className="pointer-events-none absolute -bottom-24 left-0 h-72 w-72 animate-drift rounded-full bg-node-glow opacity-60" />
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-lexical-orange">
             Ready when you are
           </p>

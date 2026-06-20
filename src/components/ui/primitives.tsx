@@ -84,7 +84,7 @@ export function PrimaryButton({
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-2 rounded-md bg-lexical-gradient px-6 py-3 font-display text-sm font-600 text-base transition-transform hover:-translate-y-0.5",
+        "shimmer-sweep group inline-flex items-center gap-2 rounded-md bg-lexical-gradient px-6 py-3 font-display text-sm font-600 text-base shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 active:scale-[0.98]",
         className
       )}
     >
@@ -107,7 +107,7 @@ export function SecondaryButton({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center gap-2 rounded-md border border-panel-border bg-panel px-6 py-3 font-display text-sm font-600 text-ink transition-colors hover:border-lexical-orange hover:text-lexical-orange",
+        "inline-flex items-center gap-2 rounded-md border border-panel-border bg-panel px-6 py-3 font-display text-sm font-600 text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md",
         className
       )}
     >

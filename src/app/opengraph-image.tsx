@@ -19,9 +19,9 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundColor: "#0A0A0B",
+          backgroundColor: "#FFFFFF",
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            "linear-gradient(to right, rgba(15,23,42,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.05) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
           padding: "80px",
           fontFamily: "system-ui, sans-serif",
@@ -43,14 +43,13 @@ export default async function Image() {
               width: "64px",
               height: "64px",
               borderRadius: "12px",
-              backgroundColor: "#141416",
-              border: "1px solid #262629",
-              color: "#FF6B1A",
+              backgroundColor: "#2563EB",
+              color: "#FFFFFF",
               fontSize: "32px",
               fontWeight: 700,
             }}
           >
-            {">"}_
+            L
           </div>
           <div
             style={{
@@ -62,16 +61,16 @@ export default async function Image() {
               style={{
                 fontSize: "36px",
                 fontWeight: 700,
-                color: "#E8E6E3",
+                color: "#0F172A",
                 letterSpacing: "0.05em",
               }}
             >
-              LEX<span style={{ color: "#FF6B1A" }}>I</span>CAL
+              LEXICAL
             </div>
             <div
               style={{
                 fontSize: "16px",
-                color: "#8B8B92",
+                color: "#475569",
                 letterSpacing: "0.3em",
               }}
             >
@@ -83,7 +82,7 @@ export default async function Image() {
           style={{
             fontSize: "64px",
             fontWeight: 700,
-            color: "#E8E6E3",
+            color: "#0F172A",
             lineHeight: 1.1,
             maxWidth: "900px",
           }}
@@ -91,7 +90,7 @@ export default async function Image() {
           Elevate Your Vision With{" "}
           <span
             style={{
-              backgroundImage: "linear-gradient(90deg, #FF6B1A, #FFB627)",
+              backgroundImage: "linear-gradient(90deg, #2563EB, #4F46E5)",
               backgroundClip: "text",
               color: "transparent",
             }}
@@ -103,7 +102,7 @@ export default async function Image() {
           style={{
             marginTop: "32px",
             fontSize: "24px",
-            color: "#8B8B92",
+            color: "#475569",
             letterSpacing: "0.2em",
             textTransform: "uppercase",
           }}

@@ -10,14 +10,16 @@ interface NodeDef {
   icon: React.ReactNode;
   x: number;
   y: number;
+  accent: string;
+  chipBg: string;
 }
 
 const nodes: NodeDef[] = [
-  { id: "client", label: "Client", icon: <Laptop className="h-5 w-5" />, x: 40, y: 200 },
-  { id: "gateway", label: "API Gateway", icon: <Server className="h-5 w-5" />, x: 260, y: 200 },
-  { id: "postgres", label: "Postgres", icon: <Database className="h-5 w-5" />, x: 480, y: 80 },
-  { id: "redis", label: "Redis", icon: <Zap className="h-5 w-5" />, x: 480, y: 200 },
-  { id: "cloud", label: "Cloud Storage", icon: <Cloud className="h-5 w-5" />, x: 480, y: 320 },
+  { id: "client", label: "Client", icon: <Laptop className="h-5 w-5" />, x: 40, y: 200, accent: "#2563EB", chipBg: "#DBEAFE" },
+  { id: "gateway", label: "API Gateway", icon: <Server className="h-5 w-5" />, x: 260, y: 200, accent: "#7C3AED", chipBg: "#EDE9FE" },
+  { id: "postgres", label: "Postgres", icon: <Database className="h-5 w-5" />, x: 480, y: 80, accent: "#2563EB", chipBg: "#DBEAFE" },
+  { id: "redis", label: "Redis", icon: <Zap className="h-5 w-5" />, x: 480, y: 200, accent: "#EC4899", chipBg: "#FCE7F3" },
+  { id: "cloud", label: "Cloud Storage", icon: <Cloud className="h-5 w-5" />, x: 480, y: 320, accent: "#0EA5E9", chipBg: "#E0F2FE" },
 ];
 
 const edges: [string, string][] = [
@@ -36,29 +38,34 @@ export default function SystemDiagram() {
   const getNode = (id: string) => nodes.find((n) => n.id === id)!;
 
   return (
-    <div className="rounded-xl border border-panel-border bg-panel">
+    <div className="relative overflow-hidden rounded-2xl border border-panel-border bg-panel shadow-xl shadow-lexical-indigo/5">
       {/* Window header */}
-      <div className="flex items-center justify-between border-b border-line px-5 py-3">
+      <div className="flex items-center justify-between border-b border-line bg-lexical-vivid px-5 py-3">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
             <span className="h-3 w-3 rounded-full bg-status-red" />
             <span className="h-3 w-3 rounded-full bg-status-yellow" />
             <span className="h-3 w-3 rounded-full bg-status-green" />
           </div>
-          <span className="font-mono text-xs text-ink-muted">
+          <span className="font-mono text-xs text-white/85">
             LEXICAL_VISUALIZER_v2.0
           </span>
         </div>
-        <div className="flex items-center gap-2 rounded-full border border-status-green/30 bg-status-green/10 px-3 py-1">
-          <span className="h-1.5 w-1.5 rounded-full bg-status-green animate-pulse-slow" />
-          <span className="font-mono text-xs font-500 text-status-green">
+        <div className="flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-3 py-1">
+          <span className="animate-dot-pulse h-1.5 w-1.5 rounded-full bg-status-green" />
+          <span className="font-mono text-xs font-500 text-white">
             SYS ACTIVE
           </span>
         </div>
       </div>
 
       {/* Body */}
-      <div className="px-5 py-6">
+      <div className="relative px-5 py-6">
+        {/* Scan line sweep */}
+        <div
+          aria-hidden="true"
+          className="animate-scan-line pointer-events-none absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-lexical-indigo/30 to-transparent"
+        />
         <p className="font-mono text-xs leading-relaxed text-ink-muted">
           Interactive playground: tap any node below to initiate telemetry handshake.
         </p>
@@ -85,7 +92,7 @@ export default function SystemDiagram() {
                   y1={a.y + nodeHeight / 2}
                   x2={b.x}
                   y2={b.y + nodeHeight / 2}
-                  stroke={isActive ? "#FF6B1A" : "rgb(var(--color-panel-border))"}
+                  stroke={isActive ? getNode(to).accent : "rgb(var(--color-panel-border))"}
                   strokeWidth={isActive ? 2 : 1.5}
                   strokeDasharray={isActive ? "6 4" : "0"}
                   className={isActive ? "animate-dash" : ""}
@@ -94,7 +101,7 @@ export default function SystemDiagram() {
             })}
 
             {/* Nodes */}
-            {nodes.map((node) => {
+            {nodes.map((node, index) => {
               const isActive = active === node.id;
               return (
                 <g
@@ -104,6 +111,12 @@ export default function SystemDiagram() {
                   aria-pressed={isActive}
                   aria-label={`${node.label} node`}
                   className="cursor-pointer outline-none"
+                  style={{
+                    opacity: 0,
+                    transformBox: "fill-box",
+                    transformOrigin: "center",
+                    animation: `node-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) ${0.15 + index * 0.12}s both`,
+                  }}
                   onMouseEnter={() => setActive(node.id)}
                   onMouseLeave={() => setActive(null)}
                   onFocus={() => setActive(node.id)}
@@ -117,11 +130,16 @@ export default function SystemDiagram() {
                     y={node.y}
                     width={nodeWidth}
                     height={nodeHeight}
-                    rx={10}
-                    fill="rgb(var(--color-base))"
-                    stroke={isActive ? "#FF6B1A" : "rgb(var(--color-panel-border))"}
+                    rx={12}
+                    fill="rgb(var(--color-panel))"
+                    stroke={isActive ? node.accent : "rgb(var(--color-panel-border))"}
                     strokeWidth={isActive ? 2 : 1.5}
                     className="transition-colors"
+                    style={{
+                      filter: isActive
+                        ? `drop-shadow(0 4px 14px ${node.accent}33)`
+                        : "none",
+                    }}
                   />
                   <foreignObject
                     x={node.x}
@@ -129,14 +147,20 @@ export default function SystemDiagram() {
                     width={nodeWidth}
                     height={nodeHeight}
                   >
-                    <div
-                      className={cn(
-                        "flex h-full w-full flex-col items-center justify-center gap-1.5",
-                        isActive ? "text-lexical-orange" : "text-ink"
-                      )}
-                    >
-                      {node.icon}
-                      <span className="font-display text-sm font-600">
+                    <div className="flex h-full w-full flex-col items-center justify-center gap-1.5">
+                      <span
+                        className="flex h-7 w-7 items-center justify-center rounded-md"
+                        style={{
+                          backgroundColor: node.chipBg,
+                          color: node.accent,
+                        }}
+                      >
+                        {node.icon}
+                      </span>
+                      <span
+                        className={cn("font-display text-sm font-600")}
+                        style={{ color: isActive ? node.accent : "rgb(var(--color-ink))" }}
+                      >
                         {node.label}
                       </span>
                     </div>

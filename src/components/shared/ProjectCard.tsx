@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl border bg-panel transition-colors",
+        "group flex flex-col overflow-hidden rounded-xl border bg-panel transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-500/10",
         project.featured
           ? "border-lexical-orange/40 hover:border-lexical-orange"
           : "border-panel-border hover:border-lexical-orange/50"
@@ -17,13 +17,15 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <Link href={`/portfolio/${project.slug}`} className="block">
         <div className="relative h-44 overflow-hidden border-b border-line">
-          <RemoteImage
-            publicId={project.cloudinaryId ?? ""}
-            alt={`${project.name} screenshot`}
-            width={640}
-            height={360}
-            fallbackLabel={project.category}
-          />
+          <div className="h-full w-full transition-transform duration-500 group-hover:scale-110">
+            <RemoteImage
+              publicId={project.cloudinaryId ?? ""}
+              alt={`${project.name} screenshot`}
+              width={640}
+              height={360}
+              fallbackLabel={project.category}
+            />
+          </div>
           {project.featured && (
             <div className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full border border-lexical-orange/30 bg-base/80 px-3 py-1 backdrop-blur-sm">
               <Star className="h-3 w-3 fill-lexical-amber text-lexical-amber" />

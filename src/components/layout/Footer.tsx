@@ -15,20 +15,20 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3">
-              <span className="relative h-11 w-11 overflow-hidden rounded-lg border border-panel-border bg-[#0A0A0B]">
+            <Link href="/" className="group flex items-center gap-3">
+              <span className="relative h-11 w-11 overflow-hidden rounded-xl shadow-md shadow-blue-500/20 ring-1 ring-panel-border transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src="/images/logo/lexical-logo.jpeg"
+                  src="/images/logo/lexical-mark.jpg"
                   alt="Lexical Software logo"
                   fill
                   className="object-cover"
                 />
               </span>
               <span className="flex flex-col leading-none">
-                <span className="font-display text-lg font-700 tracking-wide text-ink">
-                  LEX<span className="text-lexical-orange">I</span>CAL
+                <span className="font-display text-lg font-extrabold tracking-wider text-ink">
+                  LEXICAL
                 </span>
-                <span className="font-mono text-[10px] tracking-[0.25em] text-ink-muted">
+                <span className="mt-1 font-mono text-[9px] font-bold tracking-widest text-lexical-orange">
                   SOFTWARE
                 </span>
               </span>
@@ -42,7 +42,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-colors hover:border-lexical-orange hover:text-lexical-orange"
+                className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md hover:shadow-blue-500/20"
               >
                 <Github className="h-4 w-4" />
               </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-colors hover:border-lexical-orange hover:text-lexical-orange"
+                className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md hover:shadow-blue-500/20"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter / X"
-                className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-colors hover:border-lexical-orange hover:text-lexical-orange"
+                className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md hover:shadow-blue-500/20"
               >
                 <Twitter className="h-4 w-4" />
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="flex items-center gap-2 text-sm text-ink transition-colors hover:text-lexical-orange"
+                      className="group flex items-center gap-2 text-sm text-ink transition-all duration-200 hover:translate-x-1 hover:text-lexical-orange"
                     >
                       <Icon className="h-3.5 w-3.5 text-lexical-orange" />
                       {link.label}
@@ -90,7 +90,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/testimonials"
-                  className="flex items-center gap-2 text-sm text-ink transition-colors hover:text-lexical-orange"
+                  className="group flex items-center gap-2 text-sm text-ink transition-all duration-200 hover:translate-x-1 hover:text-lexical-orange"
                 >
                   <Star className="h-3.5 w-3.5 text-lexical-orange" />
                   Testimonials
@@ -99,7 +99,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="flex items-center gap-2 text-sm text-ink transition-colors hover:text-lexical-orange"
+                  className="group flex items-center gap-2 text-sm text-ink transition-all duration-200 hover:translate-x-1 hover:text-lexical-orange"
                 >
                   <Mail className="h-3.5 w-3.5 text-lexical-orange" />
                   Contact Us
@@ -118,7 +118,7 @@ export default function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/services#${service.slug}`}
-                    className="flex items-center gap-2 text-sm text-ink transition-colors hover:text-lexical-orange"
+                    className="group flex items-center gap-2 text-sm text-ink transition-all duration-200 hover:translate-x-1 hover:text-lexical-orange"
                   >
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-lexical-orange" />
                     {service.name}
@@ -128,7 +128,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="flex items-center gap-2 text-sm text-ink transition-colors hover:text-lexical-orange"
+                  className="group flex items-center gap-2 text-sm text-ink transition-all duration-200 hover:translate-x-1 hover:text-lexical-orange"
                 >
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-lexical-orange" />
                   FAQ

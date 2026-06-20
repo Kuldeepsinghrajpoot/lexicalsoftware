@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useActionState } from "react";
 import Image from "next/image";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, MailCheck } from "lucide-react";
 import { submitContactForm, type ContactFormState } from "./actions";
@@ -102,8 +102,7 @@ function StepIndicator({ currentStep }: { currentStep: number }) {
 }
 
 export default function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
-  const searchParams = useSearchParams();
+const [state, formAction] = useActionState(submitContactForm, initialState);  const searchParams = useSearchParams();
   const serviceParam = searchParams.get("service");
   const defaultProjectType =
     serviceParam && projectTypes.includes(serviceParam)
@@ -142,9 +141,9 @@ export default function ContactForm() {
   if (state.success) {
     return (
       <div className="flex flex-col items-center rounded-xl border border-panel-border bg-base px-6 py-12 text-center">
-        <span className="relative h-16 w-16 overflow-hidden rounded-lg border border-panel-border bg-[#0A0A0B]">
+        <span className="relative h-16 w-16 overflow-hidden rounded-xl shadow-md shadow-blue-500/20 ring-1 ring-panel-border animate-[fade-up_0.6s_ease-out]">
           <Image
-            src="/images/logo/lexical-logo.jpeg"
+            src="/images/logo/lexical-mark.jpg"
             alt="Lexical Software logo"
             fill
             className="object-cover"

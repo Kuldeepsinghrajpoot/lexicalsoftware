@@ -6,7 +6,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import PageTransition from "@/components/shared/PageTransition";
-import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A0A0B",
+  themeColor: "#2563EB",
 };
 
 export default function RootLayout({
@@ -48,39 +47,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
       <meta name="google-site-verification" content="VJ6WZOTBC39xZiZGHbJTVjxEsy1XBI2bniFUze_HIzQ" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var stored = localStorage.getItem('lexical-theme');
-                  var theme = stored === 'light' ? 'light' : 'dark';
-                  document.documentElement.classList.remove('dark', 'light');
-                  document.documentElement.classList.add(theme);
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
       </head>
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} font-body bg-base text-ink antialiased`}
       >
-       
-        <ThemeProvider>
-          <Analytics/>
-          <SpeedInsights/>
-          <Navbar />
-          <NextTopLoader />
-          <main className="pt-20">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-          <ScrollToTop />
-        </ThemeProvider>
+        <Analytics/>
+        <SpeedInsights/>
+        <Navbar />
+        <NextTopLoader color="#2563EB" />
+        <main className="pt-24 lg:pt-28">
+          <PageTransition>{children}</PageTransition>
+        </main>
+        <Footer />
+        <ScrollToTop />
         <SpeedInsights />
       </body>
     </html>

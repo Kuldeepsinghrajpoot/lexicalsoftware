@@ -11,12 +11,13 @@ export function generateStaticParams() {
   return jobOpenings.map((job) => ({ slug: job.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const job = jobOpenings.find((j) => j.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const job = jobOpenings.find((j) => j.slug === slug);
   if (!job) return {};
   return {
     title: `${job.title} | Careers at Lexical Software`,
@@ -24,12 +25,13 @@ export function generateMetadata({
   };
 }
 
-export default function JobDetailPage({
+export default async function JobDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const job = jobOpenings.find((j) => j.slug === params.slug);
+  const { slug } = await params;
+  const job = jobOpenings.find((j) => j.slug === slug);
 
   if (!job) {
     notFound();

@@ -12,9 +12,10 @@ export const contentType = "image/png";
 export default async function Image({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   const title = post?.title ?? "Lexical Software Blog";
   const category = post?.category ?? "Articles";
 
@@ -28,9 +29,9 @@ export default async function Image({
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundColor: "#0A0A0B",
+          backgroundColor: "#FFFFFF",
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            "linear-gradient(to right, rgba(15,23,42,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.05) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
           padding: "80px",
           fontFamily: "system-ui, sans-serif",
@@ -52,24 +53,23 @@ export default async function Image({
               width: "48px",
               height: "48px",
               borderRadius: "10px",
-              backgroundColor: "#141416",
-              border: "1px solid #262629",
-              color: "#FF6B1A",
+              backgroundColor: "#2563EB",
+              color: "#FFFFFF",
               fontSize: "24px",
               fontWeight: 700,
             }}
           >
-            {">"}_
+            L
           </div>
           <div
             style={{
               fontSize: "22px",
               fontWeight: 700,
-              color: "#E8E6E3",
+              color: "#0F172A",
               letterSpacing: "0.05em",
             }}
           >
-            LEX<span style={{ color: "#FF6B1A" }}>I</span>CAL SOFTWARE
+            LEXICAL SOFTWARE
           </div>
         </div>
 
@@ -78,9 +78,9 @@ export default async function Image({
             display: "flex",
             padding: "6px 16px",
             borderRadius: "999px",
-            border: "1px solid rgba(255,107,26,0.3)",
-            backgroundColor: "rgba(255,107,26,0.1)",
-            color: "#FF6B1A",
+            border: "1px solid rgba(37,99,235,0.3)",
+            backgroundColor: "rgba(37,99,235,0.1)",
+            color: "#2563EB",
             fontSize: "20px",
             fontWeight: 500,
             textTransform: "uppercase",
@@ -95,7 +95,7 @@ export default async function Image({
           style={{
             fontSize: "56px",
             fontWeight: 700,
-            color: "#E8E6E3",
+            color: "#0F172A",
             lineHeight: 1.15,
             maxWidth: "950px",
           }}

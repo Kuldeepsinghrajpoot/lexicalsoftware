@@ -5,13 +5,15 @@ import CopyButton from "@/components/shared/CopyButton";
 
 export default function TeamCard({ member }: { member: TeamMember }) {
   return (
-    <div className="rounded-xl border border-panel-border bg-panel p-6 transition-colors hover:border-lexical-orange/50">
-      <Avatar
-        name={member.name}
-        cloudinaryId={member.cloudinaryId}
-        src={member.localImage}
-        size={80}
-      />
+    <div className="group rounded-xl border border-panel-border bg-panel p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-lexical-orange/50 hover:shadow-xl hover:shadow-blue-500/10">
+      <div className="transition-transform duration-300 group-hover:scale-105">
+        <Avatar
+          name={member.name}
+          cloudinaryId={member.cloudinaryId}
+          src={member.localImage}
+          size={80}
+        />
+      </div>
       <h3 className="mt-5 font-display text-lg font-600 text-ink">
         {member.name}
       </h3>

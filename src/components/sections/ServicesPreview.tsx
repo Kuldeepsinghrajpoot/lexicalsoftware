@@ -23,13 +23,13 @@ export default function ServicesPreview() {
             <Link
               key={service.slug}
               href={`/services#${service.slug}`}
-              className="group rounded-xl border border-panel-border bg-panel p-6 transition-colors hover:border-lexical-orange/50"
+              className="group rounded-xl border border-panel-border bg-panel p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-lexical-orange/50 hover:shadow-xl hover:shadow-blue-500/10"
             >
               <div className="flex items-start justify-between">
-                <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <Icon className="h-5 w-5" />
                 </span>
-                <ArrowUpRight className="h-4 w-4 text-ink-dim transition-colors group-hover:text-lexical-orange" />
+                <ArrowUpRight className="h-4 w-4 text-ink-dim transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-lexical-orange" />
               </div>
               <h3 className="mt-5 font-display text-lg font-600 text-ink">
                 {service.name}

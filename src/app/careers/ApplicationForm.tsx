@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useRef, useState, useActionState } from "react";
+import Image from "next/image";
+import { useFormStatus } from "react-dom";
 import { useSearchParams } from "next/navigation";
+import { MailCheck } from "lucide-react";
 import { submitApplication, type ApplicationFormState } from "./actions";
 import { getCaptchaChallenge } from "../contact/captcha-action";
 import type { CaptchaChallenge } from "@/lib/captcha";
@@ -30,7 +32,7 @@ export default function ApplicationForm({
 }: {
   forcedRole?: string;
 }) {
-  const [state, formAction] = useFormState(submitApplication, initialState);
+  const [state, formAction] = useActionState(submitApplication, initialState);
   const searchParams = useSearchParams();
   const roleParam = searchParams.get("role");
   const candidateRole = forcedRole || roleParam;
@@ -63,6 +65,39 @@ export default function ApplicationForm({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
+
+  if (state.success) {
+    return (
+      <div className="flex flex-col items-center rounded-xl border border-panel-border bg-base px-6 py-12 text-center">
+        <span className="relative h-16 w-16 overflow-hidden rounded-xl shadow-md shadow-blue-500/20 ring-1 ring-panel-border animate-[fade-up_0.6s_ease-out]">
+          <Image
+            src="/images/logo/lexical-mark.jpg"
+            alt="Lexical Software logo"
+            fill
+            sizes="64px"
+            className="object-cover"
+          />
+        </span>
+        <span className="mt-4 flex items-center gap-2 text-status-green">
+          <MailCheck className="h-5 w-5" />
+          <span className="font-display text-sm font-600 uppercase tracking-[0.2em]">
+            Application sent
+          </span>
+        </span>
+        <h2 className="mt-4 font-display text-2xl font-700 text-ink">
+          Thanks for applying! We&rsquo;ll review your application and get
+          back to you soon.
+        </h2>
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted">
+          We&rsquo;ve also sent a confirmation to your email with a copy of
+          your application.
+        </p>
+        <p className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-ink-dim">
+          Team Lexical Software
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form ref={formRef} action={formAction} className="space-y-5">
