@@ -53,7 +53,7 @@ export default function SystemDiagram() {
         </div>
         <div className="flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-3 py-1">
           <span className="animate-dot-pulse h-1.5 w-1.5 rounded-full bg-status-green" />
-          <span className="font-mono text-xs font-500 text-white">
+          <span className="font-mono text-xs font-500 text-ink">
             SYS ACTIVE
           </span>
         </div>

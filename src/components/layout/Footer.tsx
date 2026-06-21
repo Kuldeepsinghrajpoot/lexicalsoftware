@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail, MapPin, Phone, Star } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  MapPin,
+  Phone,
+  Star,
+} from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
 import { services } from "@/data/services";
 import { navIconMap } from "@/lib/icons";
@@ -8,6 +16,11 @@ import CopyButton from "@/components/shared/CopyButton";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const lastUpdated = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
 
   return (
     <footer className="border-t border-line bg-panel">
@@ -173,16 +186,21 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-line pt-8 sm:flex-row">
-          <div className="flex items-center gap-4">
-            <p className="font-mono text-xs text-ink-dim">
-              &copy; {year} Lexical Software. All rights reserved.
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <div className="flex items-center gap-4">
+              <p className="font-mono text-xs text-ink-dim">
+                &copy; {year} Lexical Software. All rights reserved.
+              </p>
+              <Link
+                href="/privacy"
+                className="font-mono text-xs text-ink-dim transition-colors hover:text-lexical-orange"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+            <p className="font-mono text-[11px] text-ink-dim">
+              Last updated: {lastUpdated}
             </p>
-            <Link
-              href="/privacy"
-              className="font-mono text-xs text-ink-dim transition-colors hover:text-lexical-orange"
-            >
-              Privacy Policy
-            </Link>
           </div>
           <div className="flex items-center gap-2 rounded-full border border-panel-border bg-base px-3 py-1.5">
             <span className="h-2 w-2 rounded-full bg-status-green animate-pulse-slow" />

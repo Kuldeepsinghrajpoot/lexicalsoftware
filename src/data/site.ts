@@ -9,13 +9,16 @@ export interface NavLink {
     | "users"
     | "star"
     | "newspaper"
-    | "graduationCap";
+    | "graduationCap"
+    | "cpu"
+    ;
 }
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/", icon: "home" },
   { label: "About Us", href: "/about", icon: "info" },
   { label: "Services", href: "/services", icon: "wrench" },
+  { label: "Technologies", href: "/technologies", icon: "cpu" },
   { label: "Portfolio", href: "/portfolio", icon: "briefcase" },
   { label: "Team", href: "/team", icon: "users" },
   // { label: "Blog", href: "/blog", icon: "newspaper" },

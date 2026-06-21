@@ -6,7 +6,6 @@ import {
   PrimaryButton,
 } from "@/components/ui/primitives";
 import { Target, Eye, ShieldCheck, Zap, Users, Award } from "lucide-react";
-import TechStackDiagram from "@/components/sections/TechStackDiagram";
 import Reveal from "@/components/shared/Reveal";
 
 const whyChooseUs = [
@@ -188,13 +187,13 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="Our toolkit"
           title="Technologies we work with"
+          description="From Next.js on the frontend to Java/Spring Boot and AWS on the backend &mdash; we work hands-on across the full stack, not just the parts we like."
           align="center"
         />
-        <div className="mx-auto mt-10 max-w-2xl">
-          <TechStackDiagram />
-        </div>
-        <div className="mt-12 text-center">
-          <PrimaryButton href="/contact">Start a Project</PrimaryButton>
+        <div className="mt-10 text-center">
+          <PrimaryButton href="/technologies">
+            Explore Our Tech Stack
+          </PrimaryButton>
         </div>
       </Section>
       </Reveal>

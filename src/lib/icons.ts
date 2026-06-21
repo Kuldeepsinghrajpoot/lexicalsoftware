@@ -16,6 +16,7 @@ import {
   Star,
   Newspaper,
   GraduationCap,
+  Cpu,
   type LucideIcon,
 } from "lucide-react";
 
@@ -41,4 +42,5 @@ export const navIconMap: Record<string, LucideIcon> = {
   star: Star,
   newspaper: Newspaper,
   graduationCap: GraduationCap,
+  cpu: Cpu,
 };

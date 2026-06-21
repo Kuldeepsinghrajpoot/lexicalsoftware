@@ -70,60 +70,6 @@ export default function PricingGrid() {
                 </p>
               </div>
 
-              <div className="relative z-10 mb-6 flex flex-col">
-                <div className="mb-1 flex items-center gap-3">
-                  <span
-                    className={cn(
-                      "text-lg font-medium line-through",
-                      isPopular && "text-violet-200 opacity-70",
-                      isDark && "text-slate-500",
-                      !isPopular && !isDark && "text-ink-dim"
-                    )}
-                  >
-                    {tier.originalPrice}
-                  </span>
-                  <span
-                    className={cn(
-                      "rounded px-2 py-1 font-mono text-[10px] font-medium uppercase tracking-wide transition-transform duration-300 group-hover:scale-105",
-                      isPopular && "bg-white text-violet-600",
-                      isDark && "bg-rose-500 text-white",
-                      !isPopular && !isDark && "bg-status-green/10 text-status-green"
-                    )}
-                  >
-                    50% OFF
-                  </span>
-                </div>
-                <div>
-                  <span
-                    className={cn(
-                      "font-display text-4xl font-extrabold",
-                      isPopular || isDark ? "text-white" : "text-ink"
-                    )}
-                  >
-                    {tier.price}
-                  </span>
-                  <span
-                    className={cn(
-                      "ml-1 text-sm font-medium",
-                      isPopular && "text-violet-100",
-                      isDark && "text-slate-400",
-                      !isPopular && !isDark && "text-ink-muted"
-                    )}
-                  >
-                    /starts at
-                  </span>
-                </div>
-                {tier.priceNote && (
-                  <p
-                    className={cn(
-                      "mt-2 inline-block w-max rounded p-1.5 font-mono text-xs font-normal text-ink",
-                      isPopular ? "bg-white/85" : "bg-rose-50"
-                    )}
-                  >
-                    {tier.priceNote}
-                  </p>
-                )}
-              </div>
 
               <ul className="relative z-10 mb-8 flex-1 space-y-4">
                 {tier.features.map((feature) => (

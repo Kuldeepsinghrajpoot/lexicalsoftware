@@ -23,9 +23,9 @@ export default function ServicesPage() {
             <span className="text-gradient-vivid">complex needs.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
-            Transparent pricing with a limited-time 50% discount. Choose the
-            right package to help your business grow.
-          </p>
+  Choose the right package to help your business grow &mdash; get
+  in touch for a tailored quote.
+</p>
         </div>
       </Section>
 
