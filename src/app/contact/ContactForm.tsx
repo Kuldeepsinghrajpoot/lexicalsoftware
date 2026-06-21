@@ -7,25 +7,30 @@ import { useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, MailCheck } from "lucide-react";
 import { submitContactForm, type ContactFormState } from "./actions";
 import { getCaptchaChallenge } from "./captcha-action";
-import { services } from "@/data/services";
 import type { CaptchaChallenge } from "@/lib/captcha";
 import { cn } from "@/lib/utils";
 
-const projectTypes = [...services.map((s) => s.name), "Other"];
+const projectTypes = [
+  "Starter Web Page",
+  "Full Fledge Website",
+  "App Development",
+  "Maintenance and Renovation",
+  "Other",
+];
 
 const budgetRanges = [
-  "Under \u20b920,000",
-  "\u20b920,000 \u2013 \u20b975,000",
-  "\u20b975,000 \u2013 \u20b92,00,000",
-  "\u20b92,00,000+",
+  "Under ₹20,000",
+  "₹20,000 – ₹75,000",
+  "₹75,000 – ₹2,00,000",
+  "₹2,00,000+",
   "Not sure yet",
 ];
 
 const contactTimes = [
   "Anytime",
-  "Morning (9 AM \u2013 12 PM)",
-  "Afternoon (12 PM \u2013 4 PM)",
-  "Evening (4 PM \u2013 8 PM)",
+  "Morning (9 AM – 12 PM)",
+  "Afternoon (12 PM – 4 PM)",
+  "Evening (4 PM – 8 PM)",
 ];
 
 const referralSources = [
@@ -102,7 +107,8 @@ function StepIndicator({ currentStep }: { currentStep: number }) {
 }
 
 export default function ContactForm() {
-const [state, formAction] = useActionState(submitContactForm, initialState);  const searchParams = useSearchParams();
+  const [state, formAction] = useActionState(submitContactForm, initialState);
+  const searchParams = useSearchParams();
   const serviceParam = searchParams.get("service");
   const defaultProjectType =
     serviceParam && projectTypes.includes(serviceParam)
@@ -171,7 +177,7 @@ const [state, formAction] = useActionState(submitContactForm, initialState);  co
 
   return (
     <form action={formAction} className="space-y-5">
-      {/* Honeypot field \u2014 hidden from real users, bots tend to fill everything */}
+      {/* Honeypot field — hidden from real users, bots tend to fill everything */}
       <div className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
         <label htmlFor="website">Website</label>
         <input
@@ -234,7 +240,7 @@ const [state, formAction] = useActionState(submitContactForm, initialState);  co
         </div>
         <input type="hidden" name="budget" value={budget} />
         <p className="font-mono text-xs text-ink-dim">
-          This helps us recommend the right scope \u2014 it's not a commitment.
+          This helps us recommend the right scope — it's not a commitment.
         </p>
       </div>
 
@@ -421,7 +427,7 @@ const [state, formAction] = useActionState(submitContactForm, initialState);  co
           </p>
           <p className="mt-1 text-ink-dim">
             We'll also ask for your phone number, company, and how you
-            heard about us below \u2014 only your name and phone are required.
+            heard about us below — only your name and phone are required.
           </p>
         </div>
       </div>

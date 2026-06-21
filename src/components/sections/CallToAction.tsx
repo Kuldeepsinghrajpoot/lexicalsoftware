@@ -11,10 +11,10 @@ export default function CallToAction() {
             Ready when you are
           </p>
           <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-700 leading-tight text-ink sm:text-4xl">
-            Have a project in mind? Let&apos;s scope it together.
+            Have a idea in your mind? Let&apos;s scope it together.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-ink-muted">
-            Tell us about your project and timeline. We typically respond
+            Tell us about your idea and timeline. We typically respond
             within one business day with next steps and a rough estimate.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

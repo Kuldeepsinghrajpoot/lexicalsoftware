@@ -5,7 +5,8 @@ import CopyButton from "@/components/shared/CopyButton";
 
 export default function TeamCard({ member }: { member: TeamMember }) {
   return (
-    <div className="group rounded-xl border border-panel-border bg-panel p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-lexical-orange/50 hover:shadow-xl hover:shadow-blue-500/10">
+    <div className="group relative overflow-hidden rounded-xl border border-panel-border bg-panel p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-lexical-orange/50 hover:shadow-xl hover:shadow-blue-500/10">
+      <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
       <div className="transition-transform duration-300 group-hover:scale-105">
         <Avatar
           name={member.name}

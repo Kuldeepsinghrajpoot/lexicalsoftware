@@ -49,7 +49,8 @@ export default function VacancySearch() {
       <div className="mt-10">
         {filtered.length === 0 ? (
           <Reveal>
-            <div className="mx-auto max-w-xl rounded-xl border border-panel-border bg-panel p-10 text-center">
+            <div className="relative mx-auto max-w-xl overflow-hidden rounded-xl border border-panel-border bg-panel p-10 text-center">
+              <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
               <Sparkles className="mx-auto h-8 w-8 text-lexical-orange" />
               <h2 className="mt-4 font-display text-xl font-700 text-ink">
                 {jobOpenings.length === 0
@@ -59,7 +60,7 @@ export default function VacancySearch() {
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                 {jobOpenings.length === 0
                   ? "We're not actively hiring at the moment, but we're always happy to hear from people who'd be a good fit down the line. Send us a general application below and we'll keep it on file."
-                  : "Try a different search term, or send us a general application below \u2014 we'll keep it on file and reach out if something fits."}
+                  : "Try a different search term, or send us a general application below — we'll keep it on file and reach out if something fits."}
               </p>
             </div>
           </Reveal>
@@ -69,8 +70,9 @@ export default function VacancySearch() {
               <Reveal key={job.slug} delay={(index % 3) * 80}>
                 <Link
                   href={`/careers/${job.slug}`}
-                  className="group flex flex-col gap-4 rounded-xl border border-panel-border bg-panel p-6 transition-colors hover:border-lexical-orange/50 sm:flex-row sm:items-center sm:justify-between"
+                  className="group relative flex flex-col gap-4 overflow-hidden rounded-xl border border-panel-border bg-panel p-6 transition-colors hover:border-lexical-orange/50 sm:flex-row sm:items-center sm:justify-between"
                 >
+                  <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <h2 className="font-display text-lg font-600 text-ink transition-colors group-hover:text-lexical-orange">

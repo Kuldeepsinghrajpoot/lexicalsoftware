@@ -12,7 +12,8 @@ export default function TestimonialCard({
     .join("");
 
   return (
-    <div className="flex flex-col rounded-xl border border-panel-border bg-panel p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-lexical-orange/40 hover:shadow-xl hover:shadow-blue-500/10">
+    <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-lexical-orange/40 hover:shadow-xl hover:shadow-blue-500/10 flex flex-col">
+      <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
       <div className="flex items-center gap-1">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star

@@ -7,6 +7,7 @@ import {
   Database,
   Cloud,
   Wrench,
+  RefreshCw,
   Hexagon,
   Home,
   Info,
@@ -28,6 +29,7 @@ export const serviceIconMap: Record<string, LucideIcon> = {
   database: Database,
   cloud: Cloud,
   wrench: Wrench,
+  refresh: RefreshCw,
 };
 
 export const navIconMap: Record<string, LucideIcon> = {

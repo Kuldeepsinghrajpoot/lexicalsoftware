@@ -87,7 +87,7 @@ export default function Navbar() {
         <div className="hidden items-center lg:flex">
           <Link
             href="/contact"
-            className="rounded-xl bg-lexical-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-md hover:brightness-105 active:scale-[0.98]"
+            className="rounded-md bg-lexical-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:shadow-md hover:brightness-105 active:scale-[0.98]"
           >
             Contact Us
           </Link>

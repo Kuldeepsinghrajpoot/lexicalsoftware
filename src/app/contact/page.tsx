@@ -27,7 +27,8 @@ export default function ContactPage() {
         {/* Contact details */}
         <Reveal direction="right">
         <div className="space-y-4">
-          <div className="rounded-xl border border-panel-border bg-panel p-6">
+          <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-6">
+            <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
             <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
               <Mail className="h-5 w-5" />
             </span>
@@ -44,7 +45,8 @@ export default function ContactPage() {
               <CopyButton value={siteConfig.email} label="email address" />
             </div>
           </div>
-          <div className="rounded-xl border border-panel-border bg-panel p-6">
+          <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-6">
+            <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
             <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
               <Phone className="h-5 w-5" />
             </span>
@@ -61,7 +63,8 @@ export default function ContactPage() {
               <CopyButton value={siteConfig.phone} label="phone number" />
             </div>
           </div>
-          <div className="rounded-xl border border-panel-border bg-panel p-6">
+          <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-6">
+            <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
             <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
               <MapPin className="h-5 w-5" />
             </span>
@@ -74,7 +77,8 @@ export default function ContactPage() {
         </Reveal>
 
         {/* Form */}
-        <div className="rounded-xl border border-panel-border bg-panel p-8">
+        <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-8">
+          <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
           <Suspense fallback={<ContactFormFallback />}>
             <ContactForm />
           </Suspense>

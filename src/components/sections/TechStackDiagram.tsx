@@ -23,7 +23,8 @@ const layers = [
 
 export default function TechStackDiagram() {
   return (
-    <div className="rounded-xl border border-panel-border bg-panel">
+    <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel">
+      <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
       <div className="flex items-center justify-between border-b border-line px-5 py-3">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">

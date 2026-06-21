@@ -9,12 +9,13 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl border bg-panel transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-500/10",
+        "group relative flex flex-col overflow-hidden rounded-xl border bg-panel transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-500/10",
         project.featured
           ? "border-lexical-orange/40 hover:border-lexical-orange"
           : "border-panel-border hover:border-lexical-orange/50"
       )}
     >
+      <div className="pointer-events-none absolute -top-10 right-0 z-10 h-32 w-32 rounded-full bg-node-glow opacity-70" />
       <Link href={`/portfolio/${project.slug}`} className="block">
         <div className="relative h-44 overflow-hidden border-b border-line">
           <div className="h-full w-full transition-transform duration-500 group-hover:scale-110">

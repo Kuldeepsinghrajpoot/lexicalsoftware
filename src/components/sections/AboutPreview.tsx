@@ -4,7 +4,7 @@ import { Section, SectionHeading, SecondaryButton } from "@/components/ui/primit
 const points = [
   "Senior engineers, not account managers, on every call",
   "Transparent timelines with weekly staging deploys",
-  "Code you own outright \u2014 no platform lock-in",
+  "Code you own outright — no platform lock-in",
 ];
 
 export default function AboutPreview() {
@@ -36,7 +36,8 @@ export default function AboutPreview() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-panel-border bg-panel p-8">
+        <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-8">
+          <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-ink-muted">
             Mission
           </p>

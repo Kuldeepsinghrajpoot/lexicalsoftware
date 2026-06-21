@@ -14,7 +14,7 @@ const whyChooseUs = [
     icon: ShieldCheck,
     title: "Senior engineers only",
     description:
-      "Every project is staffed with engineers who've shipped production systems before \u2014 no junior hand-offs.",
+      "Every project is staffed with engineers who've shipped production systems before — no junior hand-offs.",
   },
   {
     icon: Zap,
@@ -32,7 +32,7 @@ const whyChooseUs = [
     icon: Award,
     title: "Code you own",
     description:
-      "Full source, documentation, and infrastructure access handed over at project close \u2014 no lock-in.",
+      "Full source, documentation, and infrastructure access handed over at project close — no lock-in.",
   },
 ];
 
@@ -85,7 +85,8 @@ export default function AboutPage() {
       <Reveal>
       <Section className="border-t border-line">
         <div className="grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-panel-border bg-panel p-8">
+          <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-8">
+            <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
             <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
               <Target className="h-5 w-5" />
             </span>
@@ -99,7 +100,8 @@ export default function AboutPage() {
               meeting.
             </p>
           </div>
-          <div className="rounded-xl border border-panel-border bg-panel p-8">
+          <div className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-8">
+            <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
             <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
               <Eye className="h-5 w-5" />
             </span>
@@ -128,8 +130,9 @@ export default function AboutPage() {
           {whyChooseUs.map((item) => (
             <div
               key={item.title}
-              className="rounded-xl border border-panel-border bg-panel p-6"
+              className="relative overflow-hidden rounded-xl border border-panel-border bg-panel p-6"
             >
+              <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
               <span className="flex h-11 w-11 items-center justify-center rounded-lg border border-panel-border bg-base text-lexical-orange">
                 <item.icon className="h-5 w-5" />
               </span>
@@ -157,8 +160,9 @@ export default function AboutPage() {
           {journey.map((item) => (
             <div
               key={item.year}
-              className="flex gap-6 rounded-xl border border-panel-border bg-panel p-6"
+              className="relative flex gap-6 overflow-hidden rounded-xl border border-panel-border bg-panel p-6"
             >
+              <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
               <div className="shrink-0">
                 <span className="font-mono text-sm font-600 text-lexical-orange">
                   {item.year}

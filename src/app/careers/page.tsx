@@ -19,7 +19,7 @@ export default function CareersPage() {
         <SectionHeading
           eyebrow="Careers"
           title="Build with us"
-          description="We're a small, hands-on team \u2014 every hire works directly on real client projects from day one. Search open roles below or send us a general application."
+          description="We're a small, hands-on team — every hire works directly on real client projects from day one. Search open roles below or send us a general application."
           align="center"
         />
       </Section>
@@ -37,10 +37,11 @@ export default function CareersPage() {
                 ? "Send a general application"
                 : "Don't see the right role?"
             }
-            description="Tell us a bit about yourself and what you're looking for \u2014 we keep applications on file and reach out when something fits."
+            description="Tell us a bit about yourself and what you're looking for — we keep applications on file and reach out when something fits."
             align="center"
           />
-          <div className="mx-auto mt-10 max-w-2xl rounded-xl border border-panel-border bg-panel p-8">
+          <div className="relative mx-auto mt-10 max-w-2xl overflow-hidden rounded-xl border border-panel-border bg-panel p-8">
+            <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
             <Suspense fallback={<ApplicationFormFallback />}>
               <ApplicationForm />
             </Suspense>

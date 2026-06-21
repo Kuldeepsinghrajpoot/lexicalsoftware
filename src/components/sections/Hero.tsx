@@ -16,8 +16,12 @@ export default function Hero() {
       {/* Ambient glows */}
       <div className="glow-blob animate-drift -translate-x-1/2 -translate-y-1/2 left-1/4 top-0 h-[450px] w-[450px] bg-blue-100/40" />
       <div
-        className="glow-blob animate-drift -translate-x-1/2 -translate-y-1/2 right-0 top-1/3 h-[500px] w-[500px] translate-x-1/3 bg-indigo-100/30"
+        className="glow-blob animate-drift -translate-x-1/2 -translate-y-1/2 right-0 top-1/3 h-[500px] w-[500px] translate-x-1/3 bg-gradient-to-br from-violet-200/40 to-pink-200/30"
         style={{ animationDelay: "1.5s" }}
+      />
+      <div
+        className="glow-blob animate-drift left-1/3 bottom-0 h-[350px] w-[350px] bg-indigo-100/30"
+        style={{ animationDelay: "3s" }}
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-10 lg:grid-cols-12 lg:gap-8 lg:px-8 lg:py-16">
@@ -40,7 +44,7 @@ export default function Hero() {
           >
             Elevate Your <br className="hidden sm:inline" />
             Vision With <br />
-            <span className="text-gradient-lexical">Lexical Software</span>
+            <span className="text-gradient-vivid">Lexical Software</span>
           </h1>
 
           <p

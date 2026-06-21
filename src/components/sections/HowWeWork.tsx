@@ -7,14 +7,15 @@ export default function HowWeWork() {
       <SectionHeading
         eyebrow="How we work"
         title="From inquiry to launch, in five steps"
-        description="A real process, not a sales pipeline \u2014 every step has a clear output you can see."
+        description="A real process, not a sales pipeline — every step has a clear output you can see."
         align="center"
       />
 
       <div className="mt-14 grid gap-5 lg:grid-cols-5 lg:items-stretch">
         {processSteps.map((step, index) => (
           <div key={step.step} className="relative h-full">
-            <div className="flex h-full flex-col rounded-xl border border-panel-border bg-panel p-6">
+            <div className="relative h-full overflow-hidden flex flex-col rounded-xl border border-panel-border bg-panel p-6">
+              <div className="pointer-events-none absolute -top-10 right-0 h-32 w-32 rounded-full bg-node-glow opacity-70" />
               <span className="font-mono text-sm font-600 text-lexical-orange">
                 {step.step}
               </span>

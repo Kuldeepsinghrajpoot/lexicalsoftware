@@ -18,7 +18,7 @@ export const navLinks: NavLink[] = [
   { label: "Services", href: "/services", icon: "wrench" },
   { label: "Portfolio", href: "/portfolio", icon: "briefcase" },
   { label: "Team", href: "/team", icon: "users" },
-  { label: "Blog", href: "/blog", icon: "newspaper" },
+  // { label: "Blog", href: "/blog", icon: "newspaper" },
   { label: "Careers", href: "/careers", icon: "graduationCap" },
 ];
 
@@ -33,8 +33,8 @@ export const siteConfig = {
   tagline: "Elite Software Startup & Consulting Group",
   description:
     "We design, build, and ship full-stack web applications, scalable APIs, and cloud-native infrastructure.",
-  email: "hello@lexicalsoftware.dev",
-  phone: "+91 98765 43210",
+  email: "softwarelexical@gmail.com",
+  phone: "+91 9144462693",
   address: "Remote-first \u2014 Gurugram, Haryana, India",
   social: {
     github: "https://github.com/lexicalsoftware",

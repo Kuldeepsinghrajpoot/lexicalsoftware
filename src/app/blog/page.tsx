@@ -29,8 +29,7 @@ export default function BlogPage() {
       <SectionHeading
         eyebrow="Blog"
         title="Articles, tutorials & development tips"
-        description="Notes from projects we're working on \u2014 written by the engineers doing the work."
-        align="center"
+        description="Notes from projects we're working on — written by the engineers doing the work."        align="center"
       />
 
       {/* Search */}

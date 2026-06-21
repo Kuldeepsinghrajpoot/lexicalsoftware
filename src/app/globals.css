@@ -5,8 +5,8 @@
 :root,
 .light,
 .dark {
-  --color-base: 255 255 255;
-  --color-panel: 248 250 252;
+  --color-base: 248 250 252;
+  --color-panel: 255 255 255;
   --color-panel-border: 226 232 240;
   --color-line: 226 232 240;
   --color-ink: 15 23 42;
@@ -94,6 +94,14 @@ select:focus-visible {
 
 .text-gradient-amber {
   background-image: linear-gradient(135deg, #4f46e5 0%, rgb(var(--color-ink-muted)) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Vivid colorful gradient \u2014 used for the pricing section headline only */
+.text-gradient-vivid {
+  background-image: linear-gradient(90deg, #4f46e5 0%, #ec4899 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

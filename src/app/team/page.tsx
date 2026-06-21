@@ -7,7 +7,7 @@ import Reveal from "@/components/shared/Reveal";
 export const metadata: Metadata = {
   title: "Team | Lexical Software",
   description:
-    "Meet the engineers at Lexical Software \u2014 full-stack coverage across Java/Spring Boot, React, MySQL, and AWS.",
+    "Meet the engineers at Lexical Software — full-stack coverage across Java/Spring Boot, React, MySQL, and AWS.",
 };
 
 export default function TeamPage() {
@@ -16,7 +16,7 @@ export default function TeamPage() {
       <SectionHeading
         eyebrow="Team"
         title="The engineers behind Lexical Software"
-        description="Full-stack coverage across Java/Spring Boot, React, UI/UX design, and cloud infrastructure \u2014 with each member's core tech stack and direct contact info."
+        description="Full-stack coverage across Java/Spring Boot, React, UI/UX design, and cloud infrastructure — with each member's core tech stack and direct contact info."
         align="center"
       />
 
