@@ -21,12 +21,34 @@ export interface TeamMember {
 }
 
 export const team: TeamMember[] = [
+  
+  {
+    slug: "kuldeep-singh-rajpoot",
+    name: "Kuldeep Singh Rajpoot",
+    role: "Developer",
+    experience: "2+ years",
+    email: "kuldeepsinghrajpoot40@gmail.com",
+    cloudinaryId: "", // e.g. "team/kuldeep-singh-rajpoot"
+    //localImage: "/images/team/ayush-gupta.jpeg",
+    resumeUrl: "/resumes/kuldeep-singh-rajpoot.pdf",
+    bio: "Specializes in scalable backend systems, API design, and database performance.",
+    skills: [
+      { name: "Java", level: 80 },
+      { name: "Spring Boot", level: 85 },
+      { name: "React", level: 60 },
+      { name: "MySQL", level: 85 },
+      { name: "AWS", level: 70 },
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/in/kuldeepsinghrajpoot",
+    },
+  },
   {
     slug: "ayush-gupta",
     name: "Ayush Gupta",
-    role: "Full Stack Developer",
-    experience: "3+ years",
-    email: "ayush@lexicalsoftware.dev",
+    role: "Developer",
+    experience: "2+ years",
+    email: "ayushguptajan22@gmail.com",
     cloudinaryId: "", // e.g. "team/ayush-gupta"
     localImage: "/images/team/ayush-gupta.jpeg",
     resumeUrl: "/resumes/ayush-gupta.pdf",
@@ -39,36 +61,17 @@ export const team: TeamMember[] = [
       { name: "AWS", level: 65 },
     ],
     social: {
-      linkedin: "https://linkedin.com/",
-    },
-  },
-  {
-    slug: "kuldeep-singh-rajpoot",
-    name: "Kuldeep Singh Rajpoot",
-    role: "Backend Developer",
-    experience: "3+ years",
-    email: "kuldeep@lexicalsoftware.dev",
-    cloudinaryId: "", // e.g. "team/kuldeep-singh-rajpoot"
-    resumeUrl: "/resumes/kuldeep-singh-rajpoot.pdf",
-    bio: "Specializes in scalable backend systems, API design, and database performance.",
-    skills: [
-      { name: "Java", level: 80 },
-      { name: "Spring Boot", level: 85 },
-      { name: "React", level: 60 },
-      { name: "MySQL", level: 85 },
-      { name: "AWS", level: 70 },
-    ],
-    social: {
-      linkedin: "https://linkedin.com/",
+      linkedin: "https://www.linkedin.com/in/ayush-gupta-b986a0225",
     },
   },
   {
     slug: "utkarsh-saxena",
     name: "Utkarsh Saxena",
-    role: "Frontend Developer",
+    role: "Developer",
     experience: "2+ years",
-    email: "utkarsh@lexicalsoftware.dev",
+    email: "utkarshsaxena19dec@gmail.com",
     cloudinaryId: "", // e.g. "team/utkarsh-saxena"
+    //localImage: "/images/team/ayush-gupta.jpeg",
     resumeUrl: "/resumes/utkarsh-saxena.pdf",
     bio: "Crafts interactive, accessible interfaces with React and modern CSS.",
     skills: [
@@ -79,16 +82,17 @@ export const team: TeamMember[] = [
       { name: "AWS", level: 60 },
     ],
     social: {
-      linkedin: "https://linkedin.com/",
+      linkedin: "",
     },
   },
   {
     slug: "nikhil-rajpoot",
     name: "Nikhil Rajpoot",
-    role: "UI/UX Designer",
+    role: "Tester",
     experience: "2+ years",
-    email: "nikhil@lexicalsoftware.dev",
+    email: "nikhilrajpoot103@gmail.com",
     cloudinaryId: "", // e.g. "team/nikhil-rajpoot"
+    //localImage: "/images/team/ayush-gupta.jpeg",
     resumeUrl: "/resumes/nikhil-rajpoot.pdf",
     bio: "Designs clean, user-friendly interfaces and translates ideas into polished, ready-to-build UI.",
     skills: [
@@ -99,7 +103,7 @@ export const team: TeamMember[] = [
       { name: "Prototyping", level: 85 },
     ],
     social: {
-      linkedin: "https://linkedin.com/",
+      linkedin: "",
     },
   },
 ];

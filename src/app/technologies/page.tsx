@@ -33,8 +33,9 @@ export default function TechnologiesPage() {
             <span className="text-gradient-vivid">everything we ship</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
-            No buzzword soup &mdash; this is the exact set of tools running in
-            production for our clients today.
+            No buzzword soup &mdash; this is our core set of tools. Every
+            project may use a different combination depending on what fits
+            best.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-10 sm:gap-14">
@@ -115,6 +116,16 @@ export default function TechnologiesPage() {
             </Reveal>
           ))}
         </div>
+
+        {/* Note line */}
+        <p className="mt-10 text-center text-sm text-ink-muted">
+          This is our core stack &mdash; we've also worked with many other
+          tools and frameworks depending on project needs. If your tech
+          isn't listed,{" "}
+          <a href="/contact" className="font-600 text-lexical-orange hover:underline">
+            just ask.
+          </a>
+        </p>
       </Section>
 
       {/* CTA */}
