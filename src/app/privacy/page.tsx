@@ -14,8 +14,7 @@ export default function PrivacyPage() {
       <SectionHeading
         eyebrow="Privacy Policy"
         title="How we handle your information"
-        description="Last updated: June 2026"
-        align="center"
+        description={`Last updated: ${new Date().toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" })}`}        align="center"
       />
 
       <div className="mx-auto mt-12 max-w-2xl space-y-8">
@@ -37,11 +36,22 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-ink-muted">
             Contact form submissions are used solely to respond to your
-            inquiry \u2014 to discuss your project, provide a quote, and follow
+            inquiry &mdash; to discuss your project, provide a quote, and follow
             up by email or phone. Testimonial submissions are reviewed before
             being published on this site; we'll only publish your name,
             company, rating, and review text, and never your email or phone
             number.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-display text-lg font-700 text-ink">
+            Email communication
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+            When you contact us, we may follow up by email or phone to discuss
+            your project. We do not send newsletters or marketing emails &mdash;
+            you will only hear from us in direct response to your inquiry.
           </p>
         </div>
 
@@ -74,15 +84,16 @@ export default function PrivacyPage() {
             Your rights
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-            You can ask us to delete any information you've submitted at any
-            time by emailing{" "}
+            You can ask us to delete any information you've submitted, request
+            a copy of what we hold, or ask any privacy-related question at any
+            time by emailing{' '}
             <a
               href={`mailto:${siteConfig.email}`}
               className="text-lexical-orange hover:underline"
             >
               {siteConfig.email}
             </a>
-            .
+            . We'll respond within 2 business days.
           </p>
         </div>
 

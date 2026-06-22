@@ -9,7 +9,7 @@ export const processSteps: ProcessStep[] = [
     step: "01",
     title: "Inquiry",
     description:
-      "You tell us about your project through the contact form \u2014 goals, timeline, and any existing assets or codebase.",
+      "You tell us about your project through the contact form — goals, timeline, and any existing assets or codebase.",
   },
   {
     step: "02",

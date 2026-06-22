@@ -50,7 +50,7 @@ export default function Navbar() {
             <span className="font-display text-lg font-extrabold tracking-wider text-ink">
               LEXICAL
             </span>
-            <span className="mt-1 font-mono text-[9px] font-bold tracking-widest text-lexical-orange">
+            <span className="-mt-1.5 font-mono text-[14.5px] font-bold tracking-widest text-lexical-orange">
               SOFTWARE
             </span>
           </span>
@@ -69,10 +69,10 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "link-underline flex items-center gap-1.5 text-sm transition-colors duration-200",
+                    "flex items-center gap-1.5 text-sm transition-colors duration-200",
                     isActive
-                      ? "font-semibold text-lexical-orange"
-                      : "font-medium text-ink-muted hover:text-lexical-orange"
+                      ? "font-semibold text-lexical-orange underline underline-offset-4 decoration-2"
+                      : "font-medium text-ink-muted hover:text-lexical-orange link-underline"
                   )}
                 >
                   <Icon className="h-3.5 w-3.5" />
@@ -123,7 +123,7 @@ export default function Navbar() {
                     className={cn(
                       "flex items-center gap-2.5 rounded-xl px-3 py-3 text-sm font-medium",
                       isActive
-                        ? "bg-lexical-orange/10 text-lexical-orange"
+                        ? "bg-lexical-orange/10 font-semibold text-lexical-orange"
                         : "text-ink hover:bg-base"
                     )}
                   >

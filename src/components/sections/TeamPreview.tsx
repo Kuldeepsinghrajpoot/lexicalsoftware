@@ -13,7 +13,7 @@ export default function TeamPreview() {
       />
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {team.map((member) => (
+        {team.slice(0, 3).map((member) => (
           <TeamCard key={member.slug} member={member} />
         ))}
       </div>
