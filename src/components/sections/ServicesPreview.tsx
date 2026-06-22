@@ -17,7 +17,7 @@ export default function ServicesPreview() {
       />
 
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {featured.map((service) => {
+        {featured.slice(0,3).map((service) => {
           const Icon = serviceIconMap[service.icon];
           return (
             <Link

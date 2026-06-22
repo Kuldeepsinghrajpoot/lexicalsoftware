@@ -57,7 +57,7 @@ export default function TechnologiesPage() {
             </div>
             <div>
               <p className="font-mono text-3xl font-700 text-gradient-vivid">
-                3+
+                2+
               </p>
               <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-ink-muted">
                 Years in Production
