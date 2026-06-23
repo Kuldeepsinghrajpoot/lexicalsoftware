@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PrimaryButton } from "@/components/ui/primitives";
 import PricingGrid from "@/components/sections/PricingGrid";
+import QuoteCalculator from "@/components/sections/QuoteCalculator";
 import Reveal from "@/components/shared/Reveal";
 
 export const metadata: Metadata = {
@@ -23,9 +24,9 @@ export default function ServicesPage() {
             <span className="text-gradient-vivid">complex needs.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
-  Choose the right package to help your business grow &mdash; get
-  in touch for a tailored quote.
-</p>
+            Choose the right package to help your business grow &mdash; get in
+            touch for a tailored quote.
+          </p>
         </div>
       </Section>
 
@@ -37,17 +38,36 @@ export default function ServicesPage() {
 
       <Reveal>
         <Section className="border-t border-line">
+          <div className="mb-10 text-center">
+            <h2 className="font-display text-2xl font-700 text-ink sm:text-3xl">
+              Scope your project in minutes
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-ink-muted">
+              Select your project type, pages, and features — get a complexity
+              score and timeline instantly. We&apos;ll send a custom quote after
+              reviewing your scope.
+            </p>
+          </div>
+          <QuoteCalculator />
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section className="border-t border-line">
           <div className="rounded-2xl border border-panel-border bg-panel px-8 py-14 text-center">
             <h2 className="font-display text-2xl font-700 text-ink sm:text-3xl">
               Not sure which service fits?
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink-muted">
-              Tell us what you're trying to build and we'll recommend the right
-              combination &mdash; or check our FAQ for common questions about
-              scope and process.
+              Tell us what you&apos;re trying to build and we&apos;ll recommend
+              the right combination &mdash; or check our FAQ for common
+              questions about scope and process.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-                <PrimaryButton href="/contact?service=Other">Get a Quote</PrimaryButton>              <Link
+              <PrimaryButton href="/contact?service=Other">
+                Get a Quote
+              </PrimaryButton>
+              <Link
                 href="/faq"
                 className="font-display text-sm font-600 text-ink-muted hover:text-lexical-orange"
               >

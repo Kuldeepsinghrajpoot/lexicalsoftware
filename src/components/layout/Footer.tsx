@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Mail,
-  MapPin,
-  Phone,
-  Star,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Star, Cpu } from "lucide-react";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/shared/SocialIcons";
 import { navLinks, siteConfig } from "@/data/site";
 import { services } from "@/data/services";
 import { navIconMap } from "@/lib/icons";
@@ -34,6 +27,7 @@ export default function Footer() {
                   src="/images/logo/lexical-mark.jpg"
                   alt="Lexical Software logo"
                   fill
+                  sizes="44px"
                   className="object-cover"
                 />
               </span>
@@ -41,7 +35,7 @@ export default function Footer() {
                 <span className="font-display text-lg font-extrabold tracking-wider text-ink">
                   LEXICAL
                 </span>
-                <span className="-mt-1.5 font-mono text-[14.5px] font-bold tracking-widest text-lexical-orange">
+                <span className="mt-1 font-mono text-[9px] font-bold tracking-widest text-lexical-orange">
                   SOFTWARE
                 </span>
               </span>
@@ -57,7 +51,7 @@ export default function Footer() {
                 aria-label="GitHub"
                 className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md hover:shadow-blue-500/20"
               >
-                <Github className="h-4 w-4" />
+                <GithubIcon className="h-4 w-4" />
               </a>
               <a
                 href={siteConfig.social.linkedin}
@@ -66,7 +60,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
                 className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md hover:shadow-blue-500/20"
               >
-                <Linkedin className="h-4 w-4" />
+                <LinkedinIcon className="h-4 w-4" />
               </a>
               <a
                 href={siteConfig.social.twitter}
@@ -75,7 +69,7 @@ export default function Footer() {
                 aria-label="Twitter / X"
                 className="flex h-9 w-9 items-center justify-center rounded-md border border-panel-border text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-lexical-orange hover:text-lexical-orange hover:shadow-md hover:shadow-blue-500/20"
               >
-                <Twitter className="h-4 w-4" />
+                <TwitterIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -107,6 +101,15 @@ export default function Footer() {
                 >
                   <Star className="h-3.5 w-3.5 text-lexical-orange" />
                   Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/technologies"
+                  className="group flex items-center gap-2 text-sm text-ink transition-all duration-200 hover:translate-x-1 hover:text-lexical-orange"
+                >
+                  <Cpu className="h-3.5 w-3.5 text-lexical-orange" />
+                  Technologies
                 </Link>
               </li>
               <li>
@@ -176,6 +179,16 @@ export default function Footer() {
                 </a>
                 <CopyButton value={siteConfig.phone} label="phone number" />
               </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-lexical-orange" />
+                <a
+                  href="tel:+917415557442"
+                  className="transition-colors hover:text-lexical-orange"
+                >
+                  +91 7415557442
+                </a>
+                <CopyButton value="+91 7415557442" label="phone number" />
+              </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-lexical-orange" />
                 <span>{siteConfig.address}</span>
@@ -203,7 +216,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-2 rounded-full border border-panel-border bg-base px-3 py-1.5">
-            <span className="h-2 w-2 rounded-full bg-status-green animate-pulse-slow" />
+            <span className="h-2 w-2 animate-pulse-slow rounded-full bg-status-green" />
             <span className="font-mono text-xs tracking-wide text-ink-muted">
               SYS ACTIVE
             </span>

@@ -19,9 +19,10 @@ const projectTypes = [
 ];
 
 const budgetRanges = [
-  "Under ₹20,000",
-  "₹20,000 – ₹75,000",
-  "₹75,000 – ₹2,00,000",
+  "Under ₹15,000",
+  "₹15,000 – ₹50,000",
+  "₹50,000 – ₹75,000",
+  "₹75,000 – ₹1,50,000",
   "₹2,00,000+",
   "Not sure yet",
 ];
@@ -165,7 +166,7 @@ export default function ContactForm() {
           Thanks! We&rsquo;ll get back to you within one business day.
         </h2>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted">
-          We've also sent a confirmation to your email with a copy of your
+          We&apos;ve also sent a confirmation to your email with a copy of your
           message.
         </p>
         <p className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-ink-dim">
@@ -219,7 +220,7 @@ export default function ContactForm() {
       {/* Step 2: Budget */}
       <div className={cn("space-y-3", step !== 2 && "hidden")}>
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-muted">
-          What's your rough budget?
+          What&apos;s your rough budget?
         </p>
         <div className="grid gap-2 sm:grid-cols-2">
           {budgetRanges.map((range) => (
@@ -239,9 +240,9 @@ export default function ContactForm() {
           ))}
         </div>
         <input type="hidden" name="budget" value={budget} />
-        <p className="font-mono text-xs text-ink-dim">
-          This helps us recommend the right scope — it's not a commitment.
-        </p>
+          <p className="font-mono text-xs text-ink-dim">
+            This helps us recommend the right scope — it&apos;s not a commitment.
+          </p>
       </div>
 
       {/* Step 3: Description */}
@@ -426,7 +427,7 @@ export default function ContactForm() {
             <span className="text-ink-dim">Budget:</span> {budget}
           </p>
           <p className="mt-1 text-ink-dim">
-            We'll also ask for your phone number, company, and how you
+            We&apos;ll also ask for your phone number, company, and how you
             heard about us below — only your name and phone are required.
           </p>
         </div>
