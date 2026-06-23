@@ -37,8 +37,10 @@ export const siteConfig = {
   description:
     "We design, build, and ship full-stack web applications, scalable APIs, and cloud-native infrastructure.",
   email: "softwarelexical@gmail.com",
+  // cspell:ignore Haryana
   phone: "+91 9144462693",
-  address: "Remote-first \u2014 Gurugram, Haryana, India",
+  phone2: "+91 7415557442",
+address: "Remote-first — Gurugram, Haryana, India",
   social: {
     github: "https://github.com/lexicalsoftware",
     linkedin: "https://linkedin.com/company/lexicalsoftware",
