@@ -63,9 +63,21 @@ const journey = [
 ];
 
 export const metadata: Metadata = {
-  title: "About Us | Lexical Software",
+  title: "About Us | Web & App Development Studio",
   description:
-    "Lexical Software is a full-stack consulting group. Learn about our mission, vision, company journey, and the technologies we use to build production-grade applications.",
+    "Lexical Software is a web and app development studio based in Gurugram, India. We build websites, mobile apps, and web applications for startups and businesses across India.",
+  keywords: [
+    "about Lexical Software",
+    "web development company Gurugram",
+    "software company India",
+    "app development studio India",
+  ],
+  openGraph: {
+    title: "About Us | Lexical Software",
+    description:
+      "Web and app development studio based in Gurugram, India. Building digital products for businesses since day one.",
+    url: "https://lexicalsoftware.in/about",
+  },
 };
 
 export default function AboutPage() {

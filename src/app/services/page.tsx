@@ -6,9 +6,22 @@ import QuoteCalculator from "@/components/sections/QuoteCalculator";
 import Reveal from "@/components/shared/Reveal";
 
 export const metadata: Metadata = {
-  title: "Services | Lexical Software",
+  title: "Services & Pricing | Website & App Development",
   description:
-    "Website development, app development, website & app maintenance, renovation, and cloud deployment — transparent pricing for every package.",
+    "Website development, mobile app development, web applications, e-commerce stores and maintenance — transparent pricing. Based in India, serving clients nationwide.",
+  keywords: [
+    "website development pricing India",
+    "app development cost India",
+    "website banwane ka kharcha",
+    "mobile app development cost India",
+    "ecommerce website development India",
+  ],
+  openGraph: {
+    title: "Services & Pricing | Lexical Software",
+    description:
+      "Website, app, and web application development with transparent pricing. Get a free scope estimate instantly.",
+    url: "https://lexicalsoftware.in/services",
+  },
 };
 
 export default function ServicesPage() {
