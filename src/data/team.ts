@@ -51,7 +51,7 @@ funFacts: [
       { name: "Git", level: 98 },
     ],
     social: {
-      linkedin: "https://www.linkedin.com/in/kuldeepsinghrajpoot",
+      linkedin: "",
     },
   },
   {
