@@ -51,6 +51,7 @@ funFacts: [
       { name: "Git", level: 98 },
     ],
     social: {
+      
       linkedin: "",
     },
   },
